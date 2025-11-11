@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1762861911792,
+    "nome": "sa",
+    "preco": "50",
+    "categoria": "as",
+    "descricao": "sa"
+  },
+  {
+    "id": 1762862509616,
+    "nome": "sd",
+    "preco": 20,
+    "categoria": "carros",
+    "descricao": "sd"
+  }
+]
