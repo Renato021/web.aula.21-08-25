@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usado Mix - Entrar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Usado <span>Mix</span></h1>
+</header>
+
+<main>
+    <h2 style="text-align:center">Entrar</h2>
+
+    <form id="formLogin">
+        <label>E-mail</label>
+        <input type="email" id="email" required>
+
+        <label>Senha</label>
+        <input type="password" id="senha" required>
+
+        <button type="submit">Entrar</button>
+
+        <p style="margin-top:15px;">Ainda não tem conta?
+            <a href="/auth/cadastro.html">Criar conta</a>
+        </p>
+    </form>
+</main>
+
+<script>
+document.getElementById("formLogin").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    const res = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+        localStorage.setItem("usuarioLogado", JSON.stringify(data.usuario));
+        window.location.href = "/home.html";
+    } else {
+        alert("E-mail ou senha inválidos!");
+    }
+});
+</script>
+
+<footer>
+  © 2025 Usado Mix — Todos os direitos reservados.
+</footer>
+
+</body>
+</html>

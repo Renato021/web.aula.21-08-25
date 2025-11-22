@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usado Mix - Home</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Usado <span>Mix</span></h1>
+  <nav>
+    <ul>
+      <li><a class="ativo" href="/home.html">Home</a></li>
+      <li><a href="/produtos/produtos.html">Produtos</a></li>
+      <li><a href="/categorias/categorias.html">Categorias</a></li>
+      <li><a href="/pedidos/pedidos.html">Pedidos</a></li>
+      <li><a href="/comentarios/comentarios.html">Comentários</a></li>
+      <li><a href="/pontos/pontos.html">Pontos</a></li>
+      <li><a href="/doacoes/doacoes.html">Doações</a></li>
+      <li><a href="#" onclick="logout()">Sair</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  if (!localStorage.getItem("usuarioLogado")) {
+    window.location.href = "/index.html";
+  }
+  function logout() {
+    localStorage.removeItem("usuarioLogado");
+    window.location.href = "/index.html";
+  }
+</script>
+
+<main>
+  <h2>Produtos em Destaque</h2>
+
+  <div id="listaProdutos" class="produtos-container"></div>
+</main>
+
+<footer>
+  © 2025 Usado Mix — Todos os direitos reservados.
+</footer>
+
+<script>
+let produtos = [];
+
+async function carregarProdutos() {
+    const res = await fetch("/api/produtos");
+    produtos = await res.json();
+    renderizarProdutos();
+}
+
+function adicionarAoCarrinho(id) {
+    const produto = produtos.find(p => p.id === id);
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    carrinho.push(produto);
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+    alert("Produto adicionado ao carrinho!");
+}
+
+function renderizarProdutos() {
+    const lista = document.getElementById("listaProdutos");
+    lista.innerHTML = "";
+
+    produtos.forEach(p => {
+        lista.innerHTML += `
+            <div class="produto-card">
+                <img src="${p.imagem || '/img/placeholder.png'}">
+                <h3>${p.nome}</h3>
+                <p><strong>Preço:</strong> R$ ${Number(p.preco).toFixed(2)}</p>
+                <p><strong>Categoria:</strong> ${p.categoria}</p>
+                <button onclick="adicionarAoCarrinho(${p.id})">Adicionar ao Carrinho</button>
+            </div>
+        `;
+    });
+}
+
+carregarProdutos();
+</script>
+
+</body>
+</html>

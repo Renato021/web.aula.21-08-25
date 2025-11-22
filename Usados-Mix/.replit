@@ -1,0 +1,12 @@
+run = "npm start"
+modules = ["nodejs-20"]
+
+[nix]
+packages = ["psmisc", "lsof"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[agent]
+expertMode = true
