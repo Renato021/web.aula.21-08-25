@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1762869686172,
+    "nome": "sds",
+    "mensagem": "sds"
+  },
+  {
+    "id": 1763046431501,
+    "nome": "sd",
+    "mensagem": "hiorrivel\n"
+  },
+  {
+    "id": 1763387806034,
+    "nome": "Usuário",
+    "mensagem": "rgdgdgdgfg",
+    "data": 1763387806035,
+    "estrelas": 5
+  },
+  {
+    "id": 1763460064699,
+    "mensagem": "dfdsfds",
+    "estrelas": 4,
+    "pedidoId": "1762956333051",
+    "pontoId": "1762870319130",
+    "nome": "Usuário",
+    "data": 1763460064699
+  },
+  {
+    "id": 1763461842764,
+    "nome": "Paulo Cesar Viseu Junior",
+    "mensagem": "dfd"
+  },
+  {
+    "id": 1763463011737,
+    "nome": "Paulo Cesar Viseu Junior",
+    "mensagem": "uiouo\n",
+    "data": "2025-11-18T10:50:11.180Z"
+  },
+  {
+    "id": 1763463348922,
+    "nome": "Paulo Cesar Viseu Junior",
+    "mensagem": "tttttttttttttt",
+    "estrelas": 4,
+    "pedidoId": "1762958082596",
+    "pontoId": "1762870319130",
+    "data": "2025-11-18T10:55:48.373Z"
+  },
+  {
+    "id": 1763465653955,
+    "nome": "Paulo Cesar Viseu Junior",
+    "mensagem": "~[]~~~~~~~hi",
+    "estrelas": 0,
+    "pedidoId": "1762958082596",
+    "pontoId": "1763079978869",
+    "data": "2025-11-18T11:34:13.407Z"
+  },
+  {
+    "id": 1763465658882,
+    "nome": "Paulo Cesar Viseu Junior",
+    "mensagem": "kkkkkkk",
+    "estrelas": 0,
+    "pedidoId": "1762958082596",
+    "pontoId": "1763079978869",
+    "data": "2025-11-18T11:34:18.871Z"
+  },
+  {
+    "id": 1763468661846,
+    "nome": "Usuário",
+    "mensagem": "dfdsfsdf",
+    "estrelas": 3,
+    "pedidoId": "1762958082596",
+    "pontoId": "1762870319130",
+    "data": "2025-11-18T12:24:21.846Z"
+  },
+  {
+    "id": 1763469224840,
+    "nome": "Usuário",
+    "mensagem": "ddddddddddd",
+    "estrelas": 5,
+    "pedidoId": "1762956333051",
+    "pontoId": "1762870319130",
+    "data": "2025-11-18T12:33:44.840Z"
+  },
+  {
+    "id": 1763469613891,
+    "nome": "Usuário",
+    "mensagem": "wwwwwwwwww",
+    "estrelas": 5,
+    "pedidoId": "1762956333051",
+    "pontoId": "1762870319130",
+    "data": "2025-11-18T12:40:13.891Z"
+  },
+  {
+    "id": 1763470599542,
+    "nome": "Usuário",
+    "mensagem": "ssssssss",
+    "estrelas": 4,
+    "pedidoId": "1762958082596",
+    "pontoId": "1762870319130",
+    "data": "2025-11-18T12:56:39.542Z"
+  },
+  {
+    "id": 1763472234943,
+    "nome": "Usuário",
+    "mensagem": "wsww",
+    "estrelas": 5,
+    "pedidoId": "1762958082596",
+    "pontoId": "1763079978869",
+    "data": "2025-11-18T13:23:54.943Z"
+  },
+  {
+    "id": 1763473336181,
+    "nome": "Usuário",
+    "mensagem": "llllllllllll",
+    "estrelas": 5,
+    "pedidoId": "1762956333051",
+    "pontoId": "1762870319130",
+    "data": "2025-11-18T13:42:16.182Z"
+  },
+  {
+    "id": 1763556035336,
+    "pedidoId": "1763555579821",
+    "ponto": "dsd",
+    "avaliacao": 1,
+    "texto": "llllllllllll",
+    "data": "19/11/2025"
+  }
+]

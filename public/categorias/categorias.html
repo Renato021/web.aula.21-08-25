@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usado Mix - Categorias</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+  <h1>Usado <span>Mix</span></h1>
+  <nav>
+    <ul>
+      <li><a href="/home.html">Home</a></li>
+      <li><a href="/produtos/produtos.html">Produtos</a></li>
+      <li><a href="/categorias/categorias.html" class="ativo">Categorias</a></li>
+      <li><a href="/pedidos/pedidos.html">Pedidos</a></li>
+      <li><a href="/comentarios/comentarios.html">Comentários</a></li>
+      <li><a href="/pontos/pontos.html">Pontos</a></li>
+      <li><a href="/doacoes/doacoes.html">Doações</a></li>
+      <li><a href="#" onclick="logout()">Sair</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  if (!localStorage.getItem("usuarioLogado")) {
+    window.location.href = "/index.html";
+  }
+  function logout() {
+    localStorage.removeItem("usuarioLogado");
+    window.location.href = "/index.html";
+  }
+</script>
+
+<div class="container-categorias">
+
+  <!-- FORMULÁRIO -->
+  <div class="card">
+    <h2 id="tituloForm">Cadastrar Categoria</h2>
+
+    <form id="categoriaForm">
+      <input type="hidden" id="editId">
+
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="nome" 
+          placeholder="Ex: Eletrônicos"
+          required
+        />
+        <button class="btn-salvar">Salvar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- LISTA -->
+  <div class="card">
+    <h2>Lista de Categorias</h2>
+
+    <div id="listaCategorias"></div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 Usado Mix — Todos os direitos reservados.</p>
+</footer>
+
+<script src="categorias.js"></script>
+
+</body>
+</html>

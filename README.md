@@ -1,3 +1,3 @@
- git add .
- git comit -n "Exemplo"
- git push
+$ git add 
+$ git comit -n "Exemplo"
+$ git push

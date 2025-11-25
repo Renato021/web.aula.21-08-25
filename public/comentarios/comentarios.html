@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comentários - Usado Mix</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Usado <span>Mix</span></h1>
+  <nav>
+    <ul>
+      <li><a href="/home.html">Home</a></li>
+      <li><a href="/produtos/produtos.html">Produtos</a></li>
+      <li><a href="/categorias/categorias.html">Categorias</a></li>
+      <li><a href="/pedidos/pedidos.html">Pedidos</a></li>
+      <li><a class="ativo" href="/comentarios/comentarios.html">Comentários</a></li>
+      <li><a href="/pontos/pontos.html">Pontos</a></li>
+      <li><a href="/doacoes/doacoes.html">Doações</a></li>
+      <li><a href="#" onclick="logout()">Sair</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  if (!localStorage.getItem("usuarioLogado")) {
+    window.location.href = "/index.html";
+  }
+  function logout() {
+    localStorage.removeItem("usuarioLogado");
+    window.location.href = "/index.html";
+  }
+</script>
+
+<main >
+
+    <h2 >Deixar um Comentário</h2>
+
+    <div class="container" >
+
+        <!-- FORMULÁRIO -->
+        <div class="card" >
+            <h3>Selecione um Pedido:</h3>
+            <select id="selectPedido" >
+                <option value="">Carregando...</option>
+            </select>
+
+            <h3>Selecione um Ponto:</h3>
+            <select id="selectPonto" >
+                <option value="">Carregando...</option>
+            </select>
+
+            <h3>Sua avaliação:</h3>
+            <div id="ratingStars" >
+                <span class="star" onclick="setStarRating(1)">★</span>
+                <span class="star" onclick="setStarRating(2)">★</span>
+                <span class="star" onclick="setStarRating(3)">★</span>
+                <span class="star" onclick="setStarRating(4)">★</span>
+                <span class="star" onclick="setStarRating(5)">★</span>
+            </div>
+
+            <textarea id="comentario" rows="5" placeholder="Escreva seu comentário..." ></textarea>
+
+            <button id="btnEnviar" >Enviar</button>
+        </div>
+
+        <!-- LISTA DE COMENTÁRIOS -->
+        <div class="card" >
+            <h3 >Comentários Recentes</h3>
+
+            <div id="listaComentarios" >
+                Carregando comentários...
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+  © 2025 Usado Mix — Todos os direitos reservados.
+</footer>
+
+<script src="/comentarios/comentarios.js"></script>
+
+</body>
+</html>
